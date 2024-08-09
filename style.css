@@ -38,7 +38,7 @@ body>div>button {
     align-self: center;
 }
 
-body>.grid {
+body>#grid {
     width: 50%;
     height: 70%;
     background-color: white;
@@ -47,13 +47,13 @@ body>.grid {
     flex-direction: column;
 }
 
-body>.grid>.row {
+body>#grid>div {
     flex: 1;
 
     display: flex;
 }
 
-body>.grid>.row>.box {
+body>#grid>div>div {
     flex: 1;
     background-color: white;
     border-width: 1px;
