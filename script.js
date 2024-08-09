@@ -1,5 +1,7 @@
 const grid = document.getElementById("grid");
 
+// After stress testing this function, it seems that setting a *max value of 50* for both
+// row and col is fine, as this still allows for good resolution.
 function makeGrid(row, col) {
     let full = "";
     let num = 0;
