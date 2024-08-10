@@ -7,12 +7,16 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- UI about the grid's size and a button to change said size -->
     <div class="info">
         <h1 id="size-display">4x4 grid</h1>
         <button onclick="changeGrid()">Change grid</button>
     </div>
+
+    <!-- Grid we will fill up using JS -->
     <div id="grid"></div>
 
+    <!-- Import the JS script after elements are created so we can access them without needing a hacky workaround -->
     <script src="script.js"></script>
 </body>
 </html>
