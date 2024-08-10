@@ -33,9 +33,16 @@ function darken(box) {
 }
 
 function changeGrid() {
-    let newRow = prompt("Give # of rows", 4);
-    let newCol = prompt("Give # of cols", 4);
+    let newRow = prompt("Give # of rows (max: 50, min: 0)", 4);
+    let newCol = prompt("Give # of cols (max: 50, min: 0)", 4);
 
+    if(newRow > 50) {newRow = 50;}
+    if(newCol > 50) {newCol = 50;}
+
+    if(newRow < 0) {newRow = 0;}
+    if(newCol < 0) {newCol = 0;}
+
+    document.getElementById("size-display").textContent = `${newRow}x${newCol} grid`;
     makeGrid(newRow, newCol);
 }
 
