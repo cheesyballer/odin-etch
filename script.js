@@ -12,7 +12,7 @@ function makeGrid(row, col) {
         let i = col;
 
         while(i != 0) {
-            str += `<div class=box id=box-${num}></div>`;
+            str += `<div onmouseover=darken(this) class=box id=box-${num} opacity=0 style="opacity:0;background-color:rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)});"></div>`;
             num++;
             i--;
         }
@@ -25,4 +25,19 @@ function makeGrid(row, col) {
     grid.innerHTML = full;
 }
 
+function darken(box) {
+    op = Number(box.getAttribute("opacity"));
+    op += 2;
+    box.setAttribute("opacity", op);
+    box.style.opacity = op / 10;
+}
+
+function changeGrid() {
+    let newRow = prompt("Give # of rows", 4);
+    let newCol = prompt("Give # of cols", 4);
+
+    makeGrid(newRow, newCol);
+}
+
+// Default grid
 makeGrid(4,4)
